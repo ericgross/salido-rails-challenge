@@ -46,6 +46,8 @@ group :development, :test do
   gem 'httparty'
   gem 'annotate'
   gem 'foreman'
+
+  gem 'rspec-rails', '~> 3.0'
 end
 
 # webserver
@@ -65,3 +67,6 @@ gem 'binding_of_caller'
 # forms
 gem 'simple_form'
 gem 'enum_help'
+
+# api exposure
+gem 'grape'

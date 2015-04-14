@@ -1,0 +1,6 @@
+h1 All Products (without paging)
+
+ul
+  = @products.each do |product|
+    li
+      = link_to product.name, edit_product_path(product)

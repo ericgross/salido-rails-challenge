@@ -22,6 +22,7 @@ class Product < ActiveRecord::Base
 
   def self.create_or_replace!(remote_id:, name: , description:, url:, price_retail:, product_type:, year:)
     product = self.where(remote_id: remote_id).first
+    binding.pry
     product ||= self.create!(
       remote_id: remote_id,
       name: name,

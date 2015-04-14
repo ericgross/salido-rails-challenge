@@ -49,7 +49,9 @@ group :development, :test do
 end
 
 # webserver
-gem 'puma'
+gem 'thin'
+
+gem 'slim'
 
 # debugging
 gem 'pry-rails'
@@ -57,3 +59,9 @@ gem 'pry-rescue'
 gem 'pry-stack_explorer'
 gem 'pry-nav'
 gem 'awesome_print'
+gem 'better_errors'
+gem 'binding_of_caller'
+
+# forms
+gem 'simple_form'
+gem 'enum_help'

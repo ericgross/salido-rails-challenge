@@ -1,0 +1,9 @@
+= simple_form_for @product do |f|
+  = f.input :remote_id
+  = f.input :name
+  = f.input :description
+  = f.input :url
+  = f.input :price_retail
+  = f.input :product_type, as: :radio_buttons
+  = f.input :year
+  = f.button :submit

@@ -44,3 +44,37 @@ Evaluation of your submission will be based on the following criteria.
 1. Did you follow the instructions for submission?
 
 Additionally, reviewers will attempt to assess your familiarity with standard libraries. Reviewers will also assess your experience with object-oriented programming based on how you've structured your submission.
+
+# Instructions for use
+## Configuration
+
+1. Clone repo
+2. Install required gems with `bundle install`
+3. Run the rails server with `rails s`
+
+## Web Interface
+
+### Get Product List
+The Product list can be viewed at `/products` - each item can be clicked, this will bring you to the editing page where you can modify the properties of the product and submit your changes (or go back to cancel).
+
+### Add New Product
+A new product can be added by visiting `/products/new`.
+
+## API
+
+### Get Product List
+The API can be used to retrieve all products - use `/api/v1/products` - the results are returned in JSON format with the top level keys `count` signifying the number of products being returned and `products` which is an array of products, each product being represented by a hash.
+
+### Update Existing Product
+It is also possible to edit an existing product via POSTing to the API at `/api/v1/products` with ALL of the properties of the product, not just the properties you wish to modify. You will get a return code that is appropriate for the result as well as a JSON payload including the result.
+
+#### The properties that are required
+1. id (integer)
+1. name (string)
+1. url (string)
+1. price_retail (float)
+1. product_type (enum: int): wine: 0, wine set: 1, basket: 2, glassware: 3, accessory: 4
+
+#### Optional properties
+1. description (string)
+1. year (integer)
